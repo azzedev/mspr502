@@ -1,9 +1,5 @@
 # Benchmark des technologies backend
 
-> **Note :** Les chiffres ci-dessous proviennent de benchmarks communautaires  
-> (TechEmpower Framework Benchmarks – Round 23, déc. 2023, et Dev.to, mars 2025).  
-> Il ne s’agit pas d’études scientifiques ; aucune publication peer-reviewed n’existe à ce jour. :contentReference[oaicite:0]{index=0}  
-
 | Technologie | Langage | Facilité d’intégration IA | Performance (JSON serialization, req/s) | Scalabilité | Source benchmark |
 |-------------|---------|---------------------------|-----------------------------------------|-------------|------------------|
 | **FastAPI** | Python | Excellente : typage Pydantic, support NumPy, Pandas, scikit-learn, TensorFlow | ≈ 167 600 | Élevée (ASGI, Uvicorn workers, scale horizontal K8s) | [TechEmpower R23](https://medium.com/%40hasindusithmin64/fastapi-outperforms-other-frameworks-in-techempower-benchmarks-16d222b43c0f) |
