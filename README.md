@@ -19,3 +19,48 @@
 | **Flask** | Ultra-léger, courbe d’apprentissage douce ; idéal micro-services & POC | Synchrone ; nécessite Gunicorn/uvicorn pour la prod ; pas d’ORM/admin par défaut |
 | **Django** | Batteries-incluses (admin, ORM, auth) ; vaste écosystème | Monolithique, perf. plus basse ; démarrage plus lourd, config parfois verbeuse trop lourd pour un petit projet (recommandé pour une application tout en un front et back) |
 | **Express** | Même langage front/back (JS/TS) ; écosystème npm massif | Thread unique : CPU-bound → workers ; typage optionnel (TypeScript recommandé) |
+
+# Benchmark des technologies frontend
+# Chart.js
+- html 5 (canvas)
+- facile a utiliser
+- responsif
+- Bonne performance
+- personalisable (couleur légendes etc...)
+- type de graphique
+  - line
+  - barre
+  - radar
+  - camembert
+  - scatter
+  - graphique combiner
+  - bubble
+  - temps
+- format de sortis : Canvas
+
+
+# D3.js
+- le plus complexe a utiliser des 3
+- Flexibilité maximale (nimporte quelle type de visu)
+- elément en svg
+- Excellente performance
+- Supporte l’interactivité
+- format de sortis : SVG, HTML, Canvas
+
+
+# plotly
+- le plus facile a utilisé des 3
+- plus interactive que Chart.js
+- trés bonne performance
+- Large choix de graphiques :
+  - Barres
+  - lignes
+  - camemberts
+  - histogrammes
+  - Courbes 3D
+  - cartes géographiques
+  - surfaces
+  - scatterplots
+  - Heatmaps
+  - choropleth
+  - sankey
