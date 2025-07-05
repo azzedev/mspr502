@@ -1,0 +1,40 @@
+{
+  "model_propagation": {
+    "type": "LightGBM",
+    "threshold": 0.45,
+    "features": [
+      "daily_new_cases",
+      "cumulative_cases",
+      "new_cases_per_million",
+      "days_since_first_case",
+      "appearance_order",
+      "n_countries_infected",
+      "new_countries_7d",
+      "out_degree_centrality",
+      "in_degree_centrality",
+      "pagerank_centrality",
+      "betweenness_centrality",
+      "n_neighbors",
+      "n_infected_neighbors",
+      "pct_neighbors_infected"
+    ],
+    "n_features": 14,
+    "requires_graph": true,
+    "update_frequency": "weekly",
+    "monitoring_metrics": [
+      "n_countries_infected",
+      "new_countries_7d"
+    ]
+  },
+  "preprocessing": {
+    "min_cases_threshold": 0,
+    "graph_propagation_days": 14,
+    "feature_scaling": true,
+    "scaler_type": "StandardScaler"
+  },
+  "performance_thresholds": {
+    "auc_min": 0.85,
+    "precision_min": 0.9,
+    "recall_min": 0.85
+  }
+}
