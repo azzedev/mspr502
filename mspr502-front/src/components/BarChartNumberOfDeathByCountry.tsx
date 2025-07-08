@@ -16,23 +16,14 @@ const data = {
   labels: ['USA', 'France', 'Espagne', 'Russie', 'Chine'],
   datasets: [
     {
-      label: 'Nombre total de malade',
-      data: [30000, 40000, 100000, 250000, 300000],
-      backgroundColor: '#1f77b4',
+      label: 'Taux de transmition',
+      data: [1.2, 1.1, 1.4, 3, 2.4],
+      backgroundColor: 'rgba(148, 103, 189, 1)',
       borderRadius: 8,
       barThickness: 10,
       categoryPercentage: 0.5,
       barPercentage: 1.0,
-    },
-    {
-      label: 'NB de décès',
-      data: [12000, 18000, 25000, 50000, 75000],
-      backgroundColor: '#ff7f0e',
-      borderRadius: 8,
-      barThickness: 10,
-      categoryPercentage: 0.5,
-      barPercentage: 1.0,
-    },
+    }
   ],
 };
 
@@ -44,7 +35,7 @@ const options = {
     },
     title: {
       display: true,
-      text: 'Nombre de décès par cas total',
+      text: 'Taux de transmission par pays',
     },
 
   },

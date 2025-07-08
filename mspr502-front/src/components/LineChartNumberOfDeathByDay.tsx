@@ -7,9 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler
 } from 'chart.js';
-
-import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   LineElement,
@@ -18,8 +17,11 @@ ChartJS.register(
   LinearScale,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
+
+import { Line } from 'react-chartjs-2';
 
 const data = {
   labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', ],
@@ -27,25 +29,14 @@ const data = {
     {
       label: 'nombre de décès',
       data: [2, 14, 18, 22, 19],
-      borderColor: '#1f77b4',
-      backgroundColor: 'rgba(31, 119, 180, 0.2)',
+      borderColor: 'rgba(148, 103, 189, 1)',
+      backgroundColor: 'rgba(148, 103, 189, 0.2)',
       fill: true,
       tension: 0.4,
       pointRadius: 6,
       pointHoverRadius: 8,
       pointStyle: 'circle'
     },
-    {
-      label: 'Nombre de guéries',
-      data: [5, 10, 12, 13, 15],
-      borderColor: '#ff7f0e',
-      backgroundColor: 'rgba(255, 127, 14, 0.2)',
-      fill: true,
-      tension: 0.4,
-      pointRadius: 6,
-      pointHoverRadius: 8,
-      pointStyle: 'rectRot'
-    }
   ]
 };
 
@@ -57,7 +48,7 @@ const options = {
     },
     title: {
       display: true,
-      text: 'Nombre de décès par cas total',
+      text: 'Nombre de décès par jour',
     },
   },
   scales:{
@@ -66,18 +57,18 @@ const options = {
             max: 30,
             title: {
                 display: true,
-                text: 'Nombre de cas confirmés',
+                text: 'Nombre de décès par jour',
             }
         }
     }
 };
 
-function LineChartNumberOfDeathAndHealByDay() {
+function LineChartNumberOfDeathByDay() {
   return (
-    <div className="bg-gray-50 shadow-2xl border-2 border-black rounded-3xl p-4 max-w-3xl mx-auto">
+    <div className="bg-gray-50 shadow-2xl border-2 border-black rounded-3xl p-4 min-w-180 min-h-100">
       <Line data={data} options={options} />
     </div>
   );
 }
 
-export default LineChartNumberOfDeathAndHealByDay;
+export default LineChartNumberOfDeathByDay;
